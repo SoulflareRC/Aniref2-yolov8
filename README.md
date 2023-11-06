@@ -1,7 +1,8 @@
-# AniRef-yolov8
-![akihito](https://user-images.githubusercontent.com/107384280/225947977-94856df1-dfb7-4eb8-a4a2-ce8edf72edaf.png)
+# AniRef2-yolov8
+![demo_img](https://github.com/SoulflareRC/Aniref2-yolov8/assets/107384280/f705bab4-5fed-4a80-9cce-57a2172cde70)
+**This project is an improved version of [Aniref-yolov8](https://github.com/SoulflareRC/AniRef-yolov8)**
 ### What does AniRef do?
-This project mainly presents a toolchain for artists to quickly extract reference images from anime videos. We first use an object detection model to crop out the characters, and then use [Deepdanbooru](https://github.com/KichangKim/DeepDanbooru) to tag a character on a subset of Danbooru Tags and then goes to identify the character in cropped out images based on the tags inferenced from a few reference images. 
+This project mainly presents a toolchain for artists to quickly extract reference images from anime videos. We first use an object detection model to crop out the characters, and then use [CLIP](https://github.com/openai/CLIP) to extract features of target image and extracted character crops, and finally find images of the target character by computing cosine similarity between target vector and character crop feature vectors.  
 ##### Currently Supported Features
 - Character Detection
 - Character Identification
@@ -24,8 +25,8 @@ The lastest raw dataset is now uploaded on [Kaggle](https://www.kaggle.com/datas
 ### Installation
 1. Clone this repository 
 ``` 
-git clone git@github.com:SoulflareRC/AniRef-yolov8.git
-cd AniRef-yolov8
+git clone git@github.com:SoulflareRC/Aniref2-yolov8.git
+cd Aniref2-yolov8
 ```
 2. Create a virtual environment(optional)
 ``` 
@@ -43,6 +44,4 @@ python gradio_interface.py
 ### Usage
 See the [project wiki](https://github.com/SoulflareRC/AniRef-yolov8/wiki) for detailed instructions on how to use each function of the app. We also provide a demo video for how to use this program. 
 
-
-[![image](https://user-images.githubusercontent.com/107384280/226233017-0921e78e-d33c-41ee-89c4-676779fa14d7.png)](https://youtu.be/mNdLELk8-zA)
 
