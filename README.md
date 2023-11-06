@@ -2,7 +2,8 @@
 ![demo_img](https://github.com/SoulflareRC/Aniref2-yolov8/assets/107384280/f705bab4-5fed-4a80-9cce-57a2172cde70)
 **This project is an improved version of [Aniref-yolov8](https://github.com/SoulflareRC/AniRef-yolov8)**
 ### What does AniRef do?
-This project mainly presents a toolchain for artists to quickly extract reference images from anime videos. We first use an object detection model to crop out the characters, and then use [CLIP](https://github.com/openai/CLIP) to extract features of target image and extracted character crops, and finally find images of the target character by computing cosine similarity between target vector and character crop feature vectors.  
+**Given a reference image of a character and a video, it automatically extracts images of the character from the video.** <br> <br>
+Finding good reference images has always been a challenging and time consuming task for artists. Most of the times it's tedious and hard to manually get reference images from the anime outselves and we end up relying on the artbooks published by the anime studios. This project mainly presents a toolchain for artists to quickly extract reference images of their desired characters from anime videos.  We first use an object detection model to crop out the characters, and then use [CLIP](https://github.com/openai/CLIP) to extract features of target image and extracted character crops, and finally find images of the target character by computing cosine similarity between target vector and character crop feature vectors.  
 ##### Currently Supported Features
 - Character Detection
 - Character Identification
